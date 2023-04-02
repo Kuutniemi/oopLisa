@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class Korttipakka {
     private ArrayList<Pelikortti> kortit;
-    private Scanner lukija;
     
     public Korttipakka() {
         kortit = new ArrayList<Pelikortti>();
@@ -42,16 +40,13 @@ public class Korttipakka {
    }
 
 
-//    Change so it asks user for nosta, palauta or lopeta
    public static void main (String[] args) {
      Korttipakka pakka = new Korttipakka();
-     lukija = new Scanner(System.in);
      pakka.sekoita();
     //  System.out.println(pakka);
-     System.out.println(pakka.nosta());
+     System.out.println("Nostit kortin: " + pakka.nosta());
     //  System.out.println(pakka);
      pakka.palauta();
-     System.out.println(pakka);
    }
 
 }
